@@ -55,9 +55,9 @@ class Asymmblock(nn.Module):
         return output
 
 
-class AsymmNet(nn.Module):
+class RDACN(nn.Module):
     def __init__(self, in_channels, num_classes, mid_planes=36, growthrate=1.5):
-        super(AsymmNet, self).__init__()
+        super(RDACN, self).__init__()
         num_planes = 2*mid_planes
         self.mid_planes = mid_planes
         self.conv1 = nn.Conv2d(in_channels, num_planes, kernel_size=3, padding=1, bias=False)
